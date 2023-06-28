@@ -9,7 +9,7 @@ import javax.validation.constraints.Pattern;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class PasswordChangeRequest {
+public class ChangePasswordRequest {
 
     @NotNull(message = "기존 비밀번호를 입력하세요")
     private String password;

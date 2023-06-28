@@ -1,6 +1,5 @@
 package com.example.springbootstudy.domain.user.controller;
 
-import com.example.springbootstudy.domain.user.controller.dto.Request.PasswordChangeRequest;
 import com.example.springbootstudy.domain.user.controller.dto.Request.UserLoginRequest;
 import com.example.springbootstudy.domain.user.controller.dto.Request.UserSignUpRequest;
 import com.example.springbootstudy.domain.user.service.UserService;

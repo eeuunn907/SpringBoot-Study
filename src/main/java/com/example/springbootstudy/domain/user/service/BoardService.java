@@ -1,7 +1,7 @@
 package com.example.springbootstudy.domain.user.service;
 
 
-import com.example.springbootstudy.domain.user.controller.dto.Request.BoardSaveRequest;
+import com.example.springbootstudy.domain.user.controller.dto.Request.CreatBoardRequest;
 import com.example.springbootstudy.domain.user.domain.Board;
 import com.example.springbootstudy.domain.user.domain.repository.BoardRepository;
 import lombok.RequiredArgsConstructor;
@@ -15,7 +15,7 @@ public class BoardService {
     private final BoardRepository boardRepository;
 
     @Transactional
-    public void save(BoardSaveRequest request) {
+    public void save(CreatBoardRequest request) {
         boardRepository.save(
                 Board.builder()
                         .title(request.getTitle())

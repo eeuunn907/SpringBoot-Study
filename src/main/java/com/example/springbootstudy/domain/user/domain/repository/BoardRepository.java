@@ -7,6 +7,5 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface BoardRepository extends JpaRepository<Board,Long> {
-    @Query("SELECT p FROM Board p order by p.id DESC ")
-    List<Board> findAllDESE();
+    List<Board> findAll();
 }

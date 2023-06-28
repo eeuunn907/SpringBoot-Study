@@ -1,6 +1,6 @@
 package com.example.springbootstudy.domain.user.controller;
 
-import com.example.springbootstudy.domain.user.controller.dto.Request.BoardSaveRequest;
+import com.example.springbootstudy.domain.user.controller.dto.Request.CreatBoardRequest;
 import com.example.springbootstudy.domain.user.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BoardController {
     private final BoardService boardService;
-    @PostMapping("/api/v1/board")
-    public void save(@RequestBody BoardSaveRequest request){
-            boardService.save(request);
-        }
+
+    @PostMapping
+    public void createBoard(@RequestBody CreatBoardRequest request) { //유효성 검증 어노테이션 붙여주기
+        boardService.save(request);
+    }
 }

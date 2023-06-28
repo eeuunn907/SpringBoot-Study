@@ -1,19 +1,13 @@
 package com.example.springbootstudy.domain.user.service;
 
-import com.example.springbootstudy.domain.user.controller.dto.Request.PasswordChangeRequest;
 import com.example.springbootstudy.domain.user.controller.dto.Request.UserLoginRequest;
 import com.example.springbootstudy.domain.user.controller.dto.Request.UserSignUpRequest;
 import com.example.springbootstudy.domain.user.domain.User;
 import com.example.springbootstudy.domain.user.domain.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.expression.spel.ast.NullLiteral;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.Option;
 import javax.transaction.Transactional;
-import javax.validation.constraints.Null;
-import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
