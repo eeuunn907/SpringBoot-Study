@@ -21,7 +21,7 @@ public class SignUpRequest {
     private String name;
 
     @NotBlank(message = "비밀번호는 null,공백,띄어쓰기를 허용하지 않습니다")
-    @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[~!@#$%^&*()+|=])[A-Za-z\\d~!@#$%^&*()+|=]{8,20}$")
+    @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[~!@#$%^&*()+|=])[A-Za-z\\\\\\d~!@#$%^&*()+|=]{8,20}$")
     @Size(min = 8,max = 20, message = "최소 8자 ~ 20자 까지 입력 가능합니다")
     private String password;
 
