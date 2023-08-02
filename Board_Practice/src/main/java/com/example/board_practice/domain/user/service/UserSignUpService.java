@@ -23,7 +23,6 @@ public class UserSignUpService {
                 .phoneNumber(request.getPhoneNumber())
                 .build();
 
-        userRepository.save(user);
     }
 
 }
