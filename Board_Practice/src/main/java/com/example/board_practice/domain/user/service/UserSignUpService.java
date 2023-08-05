@@ -1,6 +1,5 @@
 package com.example.board_practice.domain.user.service;
 
-
 import com.example.board_practice.domain.user.domain.User;
 import com.example.board_practice.domain.user.domain.repository.UserRepository;
 import com.example.board_practice.domain.user.presentation.dto.request.SignUpRequest;
@@ -15,7 +14,7 @@ public class UserSignUpService {
     private final UserRepository userRepository;
 
     @Transactional
-    public void SignUp(SignUpRequest request) {
+    public void execute(SignUpRequest request) {
 
         User user = User.builder()
                 .accountId(request.getAccountId())
@@ -26,5 +25,4 @@ public class UserSignUpService {
 
         userRepository.save(user);
     }
-
 }
