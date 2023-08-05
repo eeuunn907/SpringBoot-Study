@@ -1,13 +1,25 @@
 spring:
   datasource:
-    url: ${datasource}
+    url: ${DATASOURCE}
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: ${username}
-    password: ${password}
+    username: ${USERNAME}
+    password: ${PASSWORD}
 
   jpa:
     database: mysql
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: create #create-drop, update, validate, none
+      import_files: classpath:db/data.sql
+      import_files_sql_extractor: org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
     show-sql: true
+    connection:
+      charSet: UTF-8
+
+    jackson:
+      property-naming-strategy: SNAKE_CASE
+
+  server:
+    error:
+      include-binding-errors: always
+      include-message: always
