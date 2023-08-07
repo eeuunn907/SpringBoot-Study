@@ -1,11 +1,10 @@
 package com.example.board_practice.domain.user.domain.repository;
 
 import com.example.board_practice.domain.user.domain.User;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.Optional;
-
-public interface UserRepository extends JpaRepository<User,Long> {
+public interface UserRepository extends JpaRepository<User, Long> {
 
     Optional<User> findByAccountId(String accountId);
 }
