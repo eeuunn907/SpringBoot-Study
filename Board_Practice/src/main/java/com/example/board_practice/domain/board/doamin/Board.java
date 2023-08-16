@@ -32,27 +32,27 @@ public class Board extends BaseTimeEntity {
     private Integer likeCount;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id",nullable = false)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Builder
-    public Board(String title,String content,String likeCount,User user){
+    public Board(String title, String content, Integer likeCount, User user) {
         this.title = title;
         this.content = content;
         this.likeCount = likeCount;
         this.user = user;
     }
 
-    public void modifyBoard(String title,String content){
+    public void modifyBoard(String title, String content) {
         this.title = title;
         this.content = content;
     }
 
-    public void addLikeCount(){
+    public void addLikeCount() {
         this.likeCount += 1;
     }
 
-    public void minusLikeCount(){
+    public void minusLikeCount() {
         this.likeCount -= 1;
     }
 }
